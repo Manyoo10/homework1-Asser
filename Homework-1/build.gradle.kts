@@ -15,7 +15,6 @@ plugins {
     id("io.spring.dependency-management") version "1.0.13.RELEASE" apply false
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion apply false
     id("io.gitlab.arturbosch.detekt") version "1.21.0"
-
     id("org.siouan.frontend-jdk11") version "6.0.0"
 }
 
@@ -90,6 +89,8 @@ configure(subprojects.filter { server in it.name || "utils" in it.name }) {
         testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
         testImplementation("org.junit.jupiter:junit-jupiter-params:$junitJupiterVersion")
         testRuntimeOnly("org.junit.platform:junit-platform-console:1.9.0")
+
+
     }
 }
 
